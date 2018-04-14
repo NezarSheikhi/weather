@@ -1,0 +1,420 @@
+body {
+    color: #fff;
+    background-image: url(../picture/jason-blackeye.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100%;
+    font-family: Verdana, sans-serif;
+}
+.center {
+    text-align: center;
+}
+form {
+    display: inline-flex;
+    padding: 30px;
+    text-align: center;
+}
+.city {
+    width: 100%;
+    font-size: 1.5em;
+    text-shadow: 0 0 2px #999;
+}
+#input-city {
+    width: 30%;
+    min-width: 140px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #000;
+    font-size:16px;
+    color:#000;
+    display: block;
+    margin: auto;
+    outline: none;
+}
+.btn {
+    height: 30px;
+    width: 40px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: large;
+    color: #000;
+    box-shadow: 0 0 2px #000;
+    margin: auto;
+    border-radius: 5px;
+    outline: none;
+}
+.language {
+    min-width: 140px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 2px #000;
+    display: block;
+    margin: auto;
+    outline: none;
+}
+#change {
+    border-radius: 25px;
+    height: 30px;
+    width: 60px;
+    font-weight: 600;
+    color: #000;
+    outline: none;
+    box-shadow: 2px 2px 10px grey;
+}
+#showMap {
+position: absolute;
+color: #000;
+z-index:100;
+left:0;
+width: 100px;
+padding:2px 5px;
+border-radius: 0 10px 10px 0;
+}
+#map {
+position:absolute;
+top:0;
+left:0;
+width:90%;
+height:85%;
+display: none;
+margin: 5%;
+}
+
+
+@-webkit-keyframes spin { 
+100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } 
+}
+@keyframes spin { 
+100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+}
+
+
+#map {
+    width:90%;
+}
+.foot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.widget,.widget-menu__header,.widget-menu__link,.widget-menu__links span{
+    font-family:Roboto,Arial,sans-serif!important;
+}
+.widget{
+    border-radius:6px;
+    margin:0 5px 5px;
+    background-color:#fff;
+    height:234px;
+    box-shadow:10px -2px 20px 2px rgba(0,0,0,.3);
+    font-weight:400;
+    font-size:14px;
+    line-height:1.3;
+    width: 800px;
+    margin: auto;
+}
+.widget__body {
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-direction:normal;
+}
+.widget__body{
+    -webkit-justify-content:space-around;
+    -ms-flex-pack:distribute;
+    justify-content:space-around;
+    padding-bottom:16px;
+    border-radius:0 0 6px 6px;
+    -webkit-box-orient:horizontal;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    width: 800px;
+}
+.widget__calendar{
+    float:left;
+    margin-top:5px;
+    margin-left:-6px;
+}
+.widget__calendar1{
+    float:left;
+    margin-top:-15px;
+    margin-left:-6px;
+}
+.widget-menu{
+    width:100%;
+    margin:0 auto;
+    display:table;
+    clear:both;
+    content:'';
+    background-color:#fff;border-radius:6px 6px 0 0;
+}
+.widget-menu__layout{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    margin:15px auto 0;padding:0 0 5px;
+    border-bottom:2px solid #333;
+    width:780px;
+}
+.widget-menu--brown .widget-menu__layout{
+    border-bottom:2px solid #ff4f98;
+}
+.widget-menu--brown{
+    background-image:-webkit-linear-gradient(bottom right,#feb020,#ffd05c);
+    background-image:linear-gradient(to top left,#feb020,#ffd05c);
+}
+.widget-menu__header{
+    float:left;
+    margin:0;
+    font-weight:700;
+    font-size:18px;
+    line-height:1;
+    color:#333;
+    word-break:break-word;
+    max-width:500px;
+}
+.widget-menu__time{
+    float:left;
+    margin:0;
+    font-weight:500;
+    font-size:16px;
+    line-height:1;
+    color:#333;
+    word-break:break-word;
+}
+.widget-menu__gmt{
+    float:left;
+    margin:0;
+    font-weight:500;
+    font-size:16px;
+    line-height:1;
+    color:#333;
+    word-break:break-word;
+}
+.widget-menu__links{
+    float:right;
+    border-radius:0 0 6px 6px;
+}
+.widget-menu__links span{
+    font-size:14px;
+    line-height:1
+}
+.weather-card__number{
+    font-size:48px;
+    font-family:Oswald,Arial,sans-serif;
+}
+.widget-menu__links span{
+    padding-right:3px;
+    font-weight:400;
+    color:#333;
+}
+.widget-menu__links .widget-menu__layout{
+    margin-top:0;
+}
+.widget-menu__link{
+    font-weight:700;
+    color:#333!important;
+    text-decoration:none;
+    opacity:.9;
+    display: contents;
+}
+.widget-menu__link:before{
+    content:'';
+    width:14px;
+    height:14px;
+    background:url(../picture/logo-black-owm.png) 50% 50% no-repeat;
+    background-size:14px 14px;padding-right:17px;
+}
+.weather-card{
+    float:left;
+}
+.weather-card__layout{
+    padding:0 14px;
+    margin-top:16px;
+    display:table;
+    clear:both;
+}
+.weather-card__col,.weather-card__row1{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    -webkit-box-direction:normal;
+    width: 140px;
+}
+.weather-card__row1{
+    width:auto;
+    height:128px;
+    display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-pack:end;
+    -webkit-justify-content:flex-end;
+    -ms-flex-pack:end;
+    justify-content:flex-end;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;
+    align-items:center;
+}
+.weather-card__img{
+    display:block;
+    width:128px;
+    height:128px;
+    padding-top: 15px;
+}
+.weather-card__col{
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    -webkit-box-align:center;
+    -webkit-align-items:center;
+    -ms-flex-align:center;align-items:center;
+    -webkit-box-pack:start;
+    -webkit-justify-content:flex-start;
+    -ms-flex-pack:start;
+    justify-content:flex-start;
+}
+.weather-card__number{
+    font-weight:600;
+    line-height:1.3;
+    color:#333;
+    margin:0 auto;
+    padding-top:20px;
+    letter-spacing:-4px;
+    padding-right:15px
+}
+.calendar__item,.weather-card__means,.weather-card__rising,.weather-card__wind{
+    line-height:1;
+    font-family:Roboto,Arial,sans-serif!important
+}
+.weather-card__rising{
+    font-weight:400;
+    font-size:14px
+}
+.weather-card__col span{
+    color:#333;
+    padding-top:3px
+}
+.weather-card__means,.weather-card__wind{
+    color:#333;
+    text-align:center
+}
+.weather-card__means{
+    text-transform:capitalize;
+    margin:0 0 5px;
+    font-weight:700;
+    font-size:16px;
+    padding-top: 25px; 
+}
+.weather-card__wind{
+    margin:0;
+    font-weight:400;
+    font-size:12px;
+    padding:2px 0
+}
+.calendar{
+    list-style:none;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -webkit-box-align:baseline;
+    -webkit-align-items:baseline;
+    -ms-flex-align:baseline;
+    align-items:baseline;
+    width:490px;
+    margin-top:20px;
+    margin-bottom:17px;
+    padding-left: 10px;
+}
+.calendar1{
+    list-style:none;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    -webkit-box-pack:justify;
+    -webkit-justify-content:space-between;
+    -ms-flex-pack:justify;
+    justify-content:space-between;
+    -webkit-box-align:baseline;
+    -webkit-align-items:baseline;
+    -ms-flex-align:baseline;
+    align-items:baseline;
+    width:500px;
+    margin-top:16px;
+    margin-bottom:17px;
+}
+.calendar__item{
+    font-weight:800;
+    font-size:18px;
+    color:#333;
+    text-align:center
+}
+.calendar__item1{
+    font-weight:600;
+    font-size:20px;
+    color:#333;
+    text-align:center;
+}
+.calendar__item:last-child{
+    margin-right:0;
+}
+.calendar__item1:last-child{
+    margin-right:0;
+}
+.calendar >img{
+    display:block;
+    margin:0 auto;
+    width:32px;
+    height:32px;
+}
+.calendar__item >img{
+    display:block;
+    margin:0 auto;
+    width:32px;
+    height:32px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+th {
+    padding-right: 10px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
