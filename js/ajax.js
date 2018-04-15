@@ -298,7 +298,7 @@ $(function(){
                     updateWeather(OWM_URL);
                 }
                 $map.fadeOut();
-                $show.val("MAP ⦿");
+                $show.val(city+"'s MAP ⦿");
             }
             else {
                 $spin.fadeIn(100);
