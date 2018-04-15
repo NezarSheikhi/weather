@@ -106,7 +106,7 @@ $(function(){
                 
                 pressure = weatherData.main.pressure;
                 clouds = weatherData.clouds.all;
-                
+                $show.val(city+"'s MAP ⦿");
                 $(".widget-menu__header").text(city + ", " + country);
                 $("#pressure").html(pressure + " hpa");
                 $("#humid").html(humid + "%");

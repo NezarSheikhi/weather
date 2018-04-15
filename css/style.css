@@ -72,9 +72,10 @@ position: absolute;
 color: #000;
 z-index:100;
 left:0;
-width: 100px;
+width: 250px;
 padding:2px 5px;
 border-radius: 0 10px 10px 0;
+background-color: #fff;
 }
 #map {
 position:absolute;
