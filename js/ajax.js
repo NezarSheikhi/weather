@@ -298,6 +298,7 @@ $(function(){
                     updateWeather(OWM_URL);
                 }
                 $map.fadeOut();
+                // update the text inside the map button after click
                 $show.val(city+"'s MAP ⦿");
             }
             else {
