@@ -58,7 +58,7 @@ $(function(){
             lat = data.loc.split(',')[0];
             lon = data.loc.split(',')[1];
     
-            OWM_URL = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&lang="+lang+"&units=metric&appid=" + OWM_API_KEY;
+            OWM_URL = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&lang="+lang+"&units=metric&appid=" + OWM_API_KEY;
             updateWeather(OWM_URL);
             
         }
@@ -87,7 +87,7 @@ $(function(){
             urlParam = "q="+city;
         }
         
-        OWM_URL = "http://api.openweathermap.org/data/2.5/weather?"+urlParam+"&lang="+lang+"&region="+country+"&units=metric&appid=" + OWM_API_KEY;
+        OWM_URL = "https://api.openweathermap.org/data/2.5/weather?"+urlParam+"&lang="+lang+"&region="+country+"&units=metric&appid=" + OWM_API_KEY;
         updateWeather(OWM_URL);
     }
 
@@ -128,7 +128,7 @@ $(function(){
 
                 
                 //Time zone function using lat and lon from update weather function
-                var url = "http://api.worldweatheronline.com/premium/v1/tz.ashx?q=" + lat + "," + lon + "&format=json&key=ab5cafcfd7024d8d88f112611181004&callback=tfunc";
+                var url = "https://api.worldweatheronline.com/premium/v1/tz.ashx?q=" + lat + "," + lon + "&format=json&key=ab5cafcfd7024d8d88f112611181004&callback=tfunc";
                 //reference to jQuery library is required prior to using this function
                 $.getScript(url, function (response) { });
                 
@@ -295,7 +295,7 @@ $(function(){
             if($map.is(':visible')) {
                 if(newLat != lat || newLon != lon) {
                     //update weather with new latitude and longitude
-                    OWM_URL = "http://api.openweathermap.org/data/2.5/weather?lat="+newLat+"&lon="+newLon+"&lang="+lang+"&units=metric&appid=" + OWM_API_KEY;
+                    OWM_URL = "https://api.openweathermap.org/data/2.5/weather?lat="+newLat+"&lon="+newLon+"&lang="+lang+"&units=metric&appid=" + OWM_API_KEY;
                     
                     updateWeather(OWM_URL);
                 }
