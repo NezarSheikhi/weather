@@ -99,7 +99,7 @@ $(function(){
             
             var icon = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/" + weatherData.weather[0].icon + ".png";
 
-            $("body").css("background-image", "url(weather/picture/weather_" + weatherData.weather[0].icon + ".jpg" + ")");
+            $("body").css("background-image", "url(/picture/weather_" + weatherData.weather[0].icon + ".jpg" + ")");
                 city = weatherData.name;
                 country = weatherData.sys.country;
                 windDir = degToCompass(weatherData.wind.deg % 360);
